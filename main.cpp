@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <iostream>
 #include <assert.h>
 #include <vector>
@@ -5,6 +6,7 @@
 
 #include "maximumSubArray.hpp"
 #include "simplifyPath.hpp"
+#include "strStr.hpp"
 
 using namespace std;
 
@@ -22,12 +24,21 @@ void test_simplify_path() {
     //string s("/a/./b/../../c/");
     string s("/...");
     string result = solution.simplifyPath(s);
-    cout << result;
+}
+
+
+void test_str_str() {
+    char haystack[] = "hello, world!!!";
+    char needle[] = "world";
+
+    StrStrSolution solution = StrStrSolution();
+    char *res = solution.strStr(haystack, needle);
 }
 
 
 int main() {
     test_maxsubarray_solution();
     test_simplify_path();
+    test_str_str();
     return 0;
 }
