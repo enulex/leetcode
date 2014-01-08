@@ -1,6 +1,7 @@
 #include <iostream>
 #include <assert.h>
 #include <vector>
+#include <string>
 
 #include "maximumSubArray.hpp"
 #include "simplifyPath.hpp"
@@ -18,8 +19,10 @@ void test_maxsubarray_solution() {
 
 void test_simplify_path() {
     SimplifyPathSolution solution = SimplifyPathSolution();
-    string s("/a/./b/../../c/");
+    //string s("/a/./b/../../c/");
+    string s("/...");
     string result = solution.simplifyPath(s);
+    cout << result;
 }
 
 
